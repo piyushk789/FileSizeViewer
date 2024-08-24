@@ -1,3 +1,7 @@
+# Author: Kartikey Baghel
+# E-mail: kartikeybaghel@hotmail.com
+# Github: https://github.com/piyushk789
+
 import os
 from tkinter import filedialog, messagebox, ttk
 import customtkinter as ctk
@@ -137,11 +141,9 @@ class FileSizeViewer(BackgroundProcess):
         CTkLabel(self.frame_top, text="File Size Viewer", font=("Aptos", 34)).pack(side='top', anchor='n')
         CTkLabel(self.frame_top, text="Select Folder", font=("Aptos", 34)).pack(side='left', anchor='n', padx=50, pady=5)
 
-        CTkButton(self.frame_top, text="Browser", font=("Comic", 34),
-                  command=self.take_location).pack(side='right', anchor='n', padx=50, pady=5)
+        CTkButton(self.frame_top, text="Browser", font=("Comic", 34), command=self.take_location).pack(side='right', anchor='n', padx=50, pady=5)
 
-        self.entry_value = CTkEntry(self.root, placeholder_text="Paste / Browse folder directory",
-                                    textvariable=self.location, font=('comic', 24))
+        self.entry_value = CTkEntry(self.root, placeholder_text="Paste / Browse folder directory", textvariable=self.location, font=('comic', 24))
         self.entry_value.pack(side='top', anchor='w', padx=50, pady=20, fill='x')
 
         self.frame_mid.pack(side="top", fill="x", anchor='center', padx=50)
@@ -173,18 +175,14 @@ class FileSizeViewer(BackgroundProcess):
         y_scroll.pack(side='right', anchor="n", fill='y')
         self.tree_box.pack()
 
-        CTkButton(self.frame_bottom, text="Save Log", font=("Comic", 24), command=self.save_log).pack(
-            side="left", anchor="w", padx=50, pady=5)
+        CTkButton(self.frame_bottom, text="Save Log", font=("Comic", 24), command=self.save_log).pack(side="left", anchor="w", padx=50, pady=5)
         self.total_tag = CTkLabel(self.frame_bottom, text="Total: 0", font=("Comic", 22))
         self.total_tag.pack(side="left", anchor="w", padx=50, pady=5)
-        CTkButton(self.frame_bottom, text="Search", font=("Comic", 24), command=self.add_list).pack(
-            side="right", anchor="e", padx=50, pady=5)
+        CTkButton(self.frame_bottom, text="Search", font=("Comic", 24), command=self.add_list).pack(side="right", anchor="e", padx=50, pady=5)
 
         self.root.mainloop()
 
 
 if __name__ == "__main__":
-    f = FileSizeViewer()
-    f.gui()
-
-
+    screen = FileSizeViewer()
+    screen.gui()
