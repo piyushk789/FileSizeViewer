@@ -1,3 +1,7 @@
+# Author: Kartikey Baghel
+# Email : kartikey.software@gmail.com
+# Github: https://github.com/piyushk789/SizeScanner
+
 import os
 import threading
 import queue
